@@ -1,3 +1,9 @@
+:root {
+  --red-color: rgb(206,52,52);
+  --font-color: rgb(255,255,255);
+  --font-color-hover: rgb(251,200,104);
+}
+
 *,
 *::before,
 *::after {
@@ -7,15 +13,63 @@
 }
 
 body {
-  background: rgb(182, 182, 185);
+  background-image: url('food2.jpg');
+  font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #content {
   width: 100%;
-  height: 100%;
+  font-family: inherit;
 }
+
+/* HEADER */
 
 .header {
   width: 100%;
   height: 100px;
+  background: var(--red-color);
+  padding: 20px;
+  
 }
+
+.logo-container {
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.logo {
+  height: 100%;
+}
+
+nav {
+  height: 30%;
+  width: 100%;
+}
+
+ul {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.nav-link {
+  display: inline-block;
+  margin: 0 15px;
+  color: var(--font-color);
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav-link:hover {
+  transform: translateY(-10%);
+  color: var(--font-color-hover);
+}
+
+
