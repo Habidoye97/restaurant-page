@@ -136,3 +136,31 @@ ul {
   color: var(--font-color);
   font-weight: 400;
 }
+
+/* FOOTER */
+.footer {
+  position: relative;
+}
+.social-container {
+  padding: 1rem 1.875rem;
+  background: rgb(223,78,72);
+  text-align: center;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+}
+
+.fab {
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  
+}
+
+.copy-container  {
+  text-align: center;
+  color: var(--font-color);
+  padding: 1em;
+  background: var(--red-color);
+}
