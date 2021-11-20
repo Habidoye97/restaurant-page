@@ -1,3 +1,5 @@
+import loadHome from "./home";
+
 function createHeader () {
   const header = document.createElement("header");
   header.classList.add("header");
@@ -50,18 +52,24 @@ function createNav () {
   return navigation
 }
 
-function createMain {
+function createMain () {
   const main = document.createElement('main')
   main.classList.add('main')
   main.setAttribute('id', 'main')
+  
   return main
 }
+
+
 
 
 function restaurantPage () {
   const content = document.getElementById('content');
   
   content.appendChild(createHeader());
+  content.appendChild(createMain());
+
+  loadHome()
 };
 
 export default restaurantPage;
