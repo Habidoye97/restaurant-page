@@ -27,22 +27,42 @@ function createNav () {
   const home = document.createElement('li')
   home.classList.add('home');
   home.classList.add('nav-link');
-  home.textContent = "HOME"
+  home.textContent = "HOME";
+  home.addEventListener('click', (e) => {
+    if (e.target.classList.contains("active")) return;
+    setActiveButton(home);
+    loadHome()
+  })
 
   const menu = document.createElement('li')
   menu.classList.add('menu');
   menu.classList.add('nav-link');
   menu.textContent = "MENU"
+  menu.addEventListener('click', (e) => {
+    if(e.target.classList.contains('active')) return;
+    setActiveButton(menu);
+    loadMenu()
+  })
 
   const ourStory = document.createElement('li')
   ourStory.classList.add('our-story');
   ourStory.classList.add('nav-link');
   ourStory.textContent = "OUR STORY"
+  ourStory.addEventListener('click', (e) => {
+    if(e.target.classList.contains('active')) return;
+    setActiveButton(ourStory)
+    
+  })
 
   const contact = document.createElement('li')
   contact.classList.add('contact');
   contact.classList.add('nav-link');
-  contact.textContent = "CONTACT"
+  contact.textContent = "CONTACT";
+  contact.addEventListener('click', (e) => {
+    if(e.target.classList.contains('active')) return;
+    setActiveButton(contact)
+
+  })
 
   ul.appendChild(home);
   ul.appendChild(menu);
@@ -112,15 +132,29 @@ function createFooter () {
   return footer
 }
 
+function setActiveButton (option) {
+  const navOption = document.querySelectorAll('.nav-link')
+
+  navOption.forEach((option) => {
+    if(option !== this) {
+      option.classList.remove('active')
+    }
+  })
+
+  option.classList.add('active')
+}
+
 
 function restaurantPage () {
   const content = document.getElementById('content');
   
   content.appendChild(createHeader());
   content.appendChild(createMain());
-  content.appendChild(createFooter())
+  content.appendChild(createFooter());
 
-  loadMenu()
+  setActiveButton(document.querySelector('.nav-link'))
+
+  loadHome()
 };
 
 export default restaurantPage;
