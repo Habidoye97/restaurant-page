@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 
 function createHeader () {
   const header = document.createElement("header");
@@ -119,7 +120,7 @@ function restaurantPage () {
   content.appendChild(createMain());
   content.appendChild(createFooter())
 
-  loadHome()
+  loadMenu()
 };
 
 export default restaurantPage;

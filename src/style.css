@@ -164,3 +164,48 @@ ul {
   padding: 1em;
   background: var(--red-color);
 }
+
+/* MENU */
+.menu-section {
+  width: 100%;
+  padding: 7rem 0;
+  background: var(--font-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.food-col {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16%;
+  justify-content: space-between;
+}
+
+.food-container {
+  width: 28%;
+  text-align: center;
+}
+.food-container img {
+  width: 100%;
+}
+
+.food-container h2 {
+  color: var(--red-color);
+}
+
+.category {
+  text-align: center;
+}
+
+.category-head {
+  color: var(--red-color);
+}
+
+.menu-section h5 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8rem;
+}
