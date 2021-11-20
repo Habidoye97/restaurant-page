@@ -83,6 +83,11 @@ ul {
   color: var(--font-color-hover);
 }
 
+.active {
+  color: var(--font-color-hover);
+  border-bottom: 1px solid var(--font-color) ;
+}
+
 /* HOME SECTION */
 .home-welcome {
   font-size: 3.64583333vw;
