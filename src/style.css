@@ -3,6 +3,7 @@
   --font-color: rgb(255,255,255);
   --font-color-hover: rgb(251,200,104);
   --font-color2: #333;
+  --background-light: rgba(0, 0, 0, 0.6);
 }
 
 *,
@@ -181,12 +182,12 @@ ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 16%;
-  justify-content: space-between;
+  padding: 0 8%;
+  justify-content: space-evenly;
 }
 
 .food-container {
-  width: 28%;
+  width: 320px;
   text-align: center;
 }
 .food-container img {
@@ -209,3 +210,38 @@ ul {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.8rem;
 }
+
+/* CONTACT PAGE */
+
+.contact-container {
+  padding: 10rem;
+  text-align: center;
+  color: white;
+  background: var(--background-light);
+  
+}
+
+.contact-container img {
+  width: 100%;
+}
+
+@media screen and (max-width: 790px) {
+  .contact-container, .home-welcome {
+    padding: 10rem 0.5rem 2rem 0.5em ;
+  }
+
+  .perception-col {
+    display: block;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .perception-details, .perception-head {
+    width: 100%;
+  }
+
+  .mission-details {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+}
+

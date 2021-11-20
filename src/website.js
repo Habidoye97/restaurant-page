@@ -1,5 +1,6 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadContact from "./contact";
 
 function createHeader () {
   const header = document.createElement("header");
@@ -44,16 +45,6 @@ function createNav () {
     loadMenu()
   })
 
-  const ourStory = document.createElement('li')
-  ourStory.classList.add('our-story');
-  ourStory.classList.add('nav-link');
-  ourStory.textContent = "OUR STORY"
-  ourStory.addEventListener('click', (e) => {
-    if(e.target.classList.contains('active')) return;
-    setActiveButton(ourStory)
-    
-  })
-
   const contact = document.createElement('li')
   contact.classList.add('contact');
   contact.classList.add('nav-link');
@@ -61,12 +52,11 @@ function createNav () {
   contact.addEventListener('click', (e) => {
     if(e.target.classList.contains('active')) return;
     setActiveButton(contact)
-
+    loadContact()
   })
 
   ul.appendChild(home);
   ul.appendChild(menu);
-  ul.appendChild(ourStory);
   ul.appendChild(contact);
   navigation.appendChild(ul);
   
